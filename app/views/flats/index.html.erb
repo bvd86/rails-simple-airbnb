@@ -1,0 +1,23 @@
+<h1>All our flats (<%= @flats.count %>)</h1>
+
+<div class="cards">
+  <% @flats.each do |flat| %>
+  <div class="card">
+     <div class="card_image">
+      <img src="https://source.unsplash.com/random/300x120">
+     </div>
+      <h3 class="card_name"><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <p> Price per night :</i> <%= flat.price_per_night %>$</p>
+      <p> Number of guests :<%= flat.number_of_guests %></p>
+      <div class="links">
+        <%= link_to "More info", flat_path(flat), class: "more-link"  %>
+        <%= link_to "Update", edit_flat_path(flat), class: "update-link" %>
+        <%= link_to "Delete",
+        flat_path(flat),
+        method: :delete,
+        data: { confirm: "Are you sure?"}, class: "delete-link"  %>
+      </div>
+  </div>
+  <% end %>
+</div>

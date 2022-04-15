@@ -1,0 +1,21 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 10px  auto;
+  border: solid 1px #bbc3bd;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
